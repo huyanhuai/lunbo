@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			img{
+            border: none;
+        }
+        .carousel{
+            width: 600px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px soild #000;
+            position: relative;
+            overflow: hidden;
+
+        }
+        .carousel .imageList ul{
+            list-style: none;
+            position: relative;
+        }
+        .carousel .imageList ul li{
+            position: absolute;
+            top: 0;
+            left: 600px;
+            width: 600px;
+            height: 300px;
+        }
+        .carousel img{
+            width: 600px;
+            height: 300px;
+        }
+        .carousel .imageList ul li.first{
+            left:0;
+        }
+        .btn a{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 50%;
+            margin-top: -20px;
+            border-radius: 50%;
+            background:rgba(0,0,0,0.6);
+            z-index: 999;
+            
+        }
+        .btn a.leftBtn{
+            left: 10px;
+        }
+        .btn a.rightBtn{
+            right: 10px;
+        }
+		</style>
+	</head>
+	<body>
+		<div class="carousel" id="carousel">
+			<div class="imageList">
+				<ul>
+					<li class="first"><a href="#"><img src="img/LB4.jpg"/></a></li>
+					<li><a href="#"><img src="img/LB5.jpg"/></a></li>
+					<li><a href="#"><img src="img/LB6.jpg"/></a></li>
+					<li><a href="#"><img src="img/LB7.jpg"/></a></li>
+				</ul>
+			</div>
+			<div class="btn">
+				<a href="javascript:;" class="leftBtn" id="leftBtn"></a>
+                <a href="javascript:;" class="rightBtn" id="rightBtn"></a>
+			</div>
+		</div>
+	</body>
+	<script src="js/12.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var slider = new Slider({
+                'ID' : 'carousel',
+                'autoplayinterval' : 500,
+                'with' : 600
+           });
+	</script>
+</html>
